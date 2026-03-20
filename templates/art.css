@@ -524,24 +524,27 @@ wrapper .inner .box_R {
 /* 右邊區塊 結束 */
 
 
+/* LOGO區塊 開始 */
+.logo_box {
+	padding: 20px 0 0 0;
+	text-align: left;
+}
+
+.logo_box .inner {
+	padding: 0 25px;
+}
+
+.logo_box img {
+	width: 100%;
+	max-width: 300px;
+
+}
+/* LOGO區塊 結束 */
+
+
+
 .subhtml ul,
 .subhtml ul li {
 	margin: 0 0 50px 0;
 	line-height: 2em;
-}
-
-
-.logo {
-	padding: 20px 0 0 0;
-	text-align: right;
-}
-
-.logo .inner {
-	padding: 0 25px;
-}
-
-.logo img {
-	width: 100%;
-	max-width: 300px;
-
 }
