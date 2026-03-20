@@ -1,0 +1,542 @@
+/* 本檔案為網頁設計師撰寫,非人請勿修改,以免未來維護困難,如果需修改可請找網頁設計師討論,感謝~ */
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('font-awesome.min.css');
+
+html {
+	/*scroll-behavior: smooth;*/
+}
+
+::selection {
+	background: #ff8e09;
+	color: #fff;
+}
+
+::-moz-selection {
+	background: #ff8e09;
+	color: #fff;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+	font-size: 15px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background: url(images/bg.png) 50% 50% repeat;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:focus,
+button:focus {
+	/*下面充許自行調整*/
+	/*outline:2px dashed #0f0;*/
+}
+
+button {
+	cursor: pointer;
+}
+
+img {
+	border: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+
+/* z-index 開始 */
+
+/* z-index 結束 */
+
+
+/* 共用 開始 */
+
+/* 共用 - inner */
+.inner {
+	/* v_01 */
+	max-width: calc(1600px + 40px);
+	margin: 0 auto;
+	/* v_01 */
+	padding: 0 20px;
+}
+
+@media(max-width:600px) {
+	.inner {
+		padding: 0 10px;
+	}
+}
+
+
+
+
+
+/* 共用 結束 */
+
+
+/* 頁頭 開始 */
+header {
+	padding: 20px;
+}
+
+/* 頁頭 結束 */
+
+
+/* 頁尾 開始 */
+footer {
+	margin: 100px 0 0 0;
+}
+
+footer section {
+	text-align: center;
+}
+
+footer section:nth-child(1) {
+	margin: 0 0 10px 0;
+}
+
+footer section:nth-child(1) img {
+	width: 100%;
+	max-width: 200px;
+}
+
+footer section:nth-child(2) p {
+	font-size: 16px;
+	font-weight: 500;
+	padding: 10px;
+}
+
+@media (max-width:600px) {
+	footer {
+		margin: 50px 0 0 0;
+	}
+
+	footer section:nth-child(2) p {
+		font-size: 15px;
+		font-weight: 300;
+	}
+}
+
+/* 頁尾 結束 */
+
+
+
+/* 冊-列表 開始 */
+.book_list {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.book_list span {
+	color: #333;
+	display: inline-block;
+	margin: 0 20px;
+}
+
+.book_list a {
+	display: inline-block;
+	text-decoration: none;
+	color: #333;
+	margin: 0 5px;
+	padding: 8px 30px;
+	border-radius: 6px 6px 0 0;
+}
+
+.book_list a:hover,
+.book_list a.active {
+	color: #fff;
+	background: #555;
+}
+
+@media(max-width:768px) {
+	.book_list span {
+		margin: 0 10px;
+	}
+
+	.book_list a {
+		margin: 0 2px;
+		padding: 10px 15px;
+	}
+}
+
+@media(max-width:600px) {
+	.book_list a {
+		padding: 10px 10px;
+	}
+}
+
+/* 冊-列表 結束 */
+
+
+/* 課-列表 開始 */
+.lesson_list {
+	background: #555;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+.lesson_list ul {
+	display: none;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	gap: 20px;
+}
+
+.lesson_list ul.active {
+	display: grid;
+}
+
+.lesson_list ul li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+.lesson_list ul li a {
+	display: block;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	color: #555;
+	background: #fff;
+	transition: all 0.3s;
+}
+
+.lesson_list ul li a:hover,
+.lesson_list ul li.active a {
+	color: #fff;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+@media(max-width:768px) {
+	.lesson_list ul {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+/* 課-列表 結束 */
+
+
+/* 大包 開始 */
+
+wrapper .inner {
+	display: flex;
+}
+
+wrapper .inner .box_L,
+wrapper .inner .box_R {
+	margin: 0;
+	padding: 20px;
+}
+
+wrapper .inner .box_L {
+	grid-area: box_L;
+	flex: 1;
+}
+
+wrapper .inner .box_R {
+	grid-area: box_R;
+	width: 100%;
+	max-width: 420px;
+	margin-bottom: 40px;
+	position: sticky;
+	top: 0px;
+	z-index: 1;
+	/* 核心修正：讓它對齊頂部，不要撐開高度 */
+	align-self: flex-start;
+}
+
+@media(max-width:900px) {
+	wrapper .inner {
+		display: block;
+	}
+
+	wrapper .inner .box_R {
+		position: static;
+		max-width: none;
+	}
+
+	wrapper .inner {
+		display: grid;
+		grid-template-areas:
+			"box_R"
+			"box_L";
+	}
+}
+
+/* 大包 結束 */
+
+/* 右邊大區塊 開始 */
+.page_top,
+.page_01,
+.page_02 {
+	margin: 0 0 30px 0;
+	padding: 20px;
+	background: #fff;
+	border: 2px solid #0c1964;
+	border-radius: 20px;
+}
+
+.page_01.blur {
+	filter: blur(5px);
+	pointer-events: none;
+	user-select: none;
+	cursor: default;
+}
+
+.page_02 {
+	display: none;
+}
+
+@media(max-width:900px) {
+	.page_01 {
+		display: none;
+	}
+}
+
+/* 右邊大區塊 結束 */
+
+
+
+/* 字級大小 開始 */
+.set_text_size {
+	margin: 0;
+}
+
+.set_text_size a {
+	display: inline-block;
+	padding: 2px 8px;
+	margin: 0 5px;
+	text-decoration: none;
+	color: #333;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.set_text_size a.active {
+	background-color: #333;
+	color: #fff;
+	border: #333;
+}
+
+/* 字級大小 結束 */
+
+
+
+/* 開始答題按鈕 開始 */
+.btn_start {
+	display: block;
+	width: 100%;
+	border-radius: 10px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #333;
+	margin: 10px 0 0 0;
+	padding: 6px 10px;
+}
+
+.btn_start:hover {
+	background-color: #444;
+}
+
+/* 開始答題按鈕 結束 */
+
+
+/* 右邊區塊 開始 */
+.box_num {
+	margin: 0 0 10px 0;
+	text-align: right;
+}
+
+.box_num .num_current,
+.box_num .num_total {
+	font-size: 30px;
+}
+
+.box_exam {
+	margin: 0 0 20px 0;
+}
+
+.box_exam .title {
+	margin: 0 0 10px 0;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.box_exam .q {
+	display: flex;
+	margin: 0 0 10px 0;
+	align-items: center;
+}
+
+
+
+.box_exam .q a {
+	flex: 1;
+	display: block;
+	width: 100%;
+	color: #333;
+	border: 1px solid #333;
+	border-radius: 10px;
+	background: #fff;
+	margin: 0 10px 0 0;
+	padding: 6px 10px;
+	font-size: 17px;
+}
+
+.box_exam .q a:hover {
+	background: #d3daee;
+}
+
+
+.box_exam .q.wrong a {
+	color: #E74A4F;
+	border: 2px solid #E74A4F;
+}
+
+.box_exam .q.incorrect a {
+	color: #1CC96A;
+	border: 2px solid #1CC96A;
+}
+
+.box_exam .q .icon_none {
+	display: block;
+	width: 30px;
+	height: 30px;
+}
+
+.box_exam .q.wrong .icon_none {
+	background: url(images/icon_wrong.svg) 50% 50% no-repeat;
+	background-size: cover;
+}
+
+.box_exam .q.incorrect .icon_none {
+	background: url(images/icon_incorrect.svg) 50% 50% no-repeat;
+	background-size: cover;
+}
+
+.box_ans {
+	margin: 0 0 20px 0;
+}
+
+.box_ans .title {
+	font-size: 15px;
+	font-weight: 700;
+	margin: 0 0 10px 0;
+}
+
+.box_ans p {
+	font-size: 15px;
+}
+
+
+.box_func {
+	text-align: center;
+}
+
+.box_func .page_prev,
+.box_func .page_next,
+.box_func .page_home {
+	display: inline-block;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #333;
+	margin: 0 10px;
+	padding: 6px 20px;
+}
+
+.box_func .page_prev:hover,
+.box_func .page_next:hover,
+.box_func .page_home:hover {
+	background-color: #444;
+}
+
+.box_func .page_prev.distable,
+.box_func .page_next.distable {
+	pointer-events: none;
+	user-select: none;
+	cursor: default;
+	opacity: 0.5;
+}
+
+.box_top {
+	text-align: center;
+	margin: 0 0 10px 0;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.box_score {
+	text-align: center;
+	display: flex;
+	gap: 10px;
+	margin: 0 0 20px 0;
+	padding: 0 30px;
+}
+
+.box_score .incorrect,
+.box_score .wrong {
+	flex: 1;
+	font-size: 20px;
+	border: 2px solid;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.box_score .incorrect span,
+.box_score .wrong span {
+	display: block;
+	font-size: 60px;
+}
+
+.box_score .incorrect {
+	color: #1CC96A;
+	border: 2px solid #1CC96A;
+}
+
+.box_score .wrong {
+	color: #E74A4F;
+	border: 2px solid #E74A4F;
+}
+
+/* 右邊區塊 結束 */
+
+
+.subhtml ul,
+.subhtml ul li {
+	margin: 0 0 50px 0;
+	line-height: 2em;
+}
+
+
+.logo{
+	text-align: right;
+}
+
+.logo img{
+	width: 100%;
+	max-width: 300px;
+
+}
