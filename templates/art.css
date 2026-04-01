@@ -312,7 +312,7 @@ wrapper .inner .box_R {
 		display: none;
 	}
 	.playing .page_01 {
-		display: none;
+		display: block;
 	}
 }
 
