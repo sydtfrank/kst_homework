@@ -105,6 +105,7 @@ $(document).ready(function () {
 		$('.page_01').removeClass('blur');
 		$('.page_01').show();
 		$('.btn_start').fadeOut();
+		$(this).closest('.box_R').addClass('playing');
 	};
 
 	// 渲染題目
