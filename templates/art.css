@@ -187,7 +187,7 @@ footer section:nth-child(2) p {
 
 /* 課-列表 開始 */
 .lesson_list {
-	background: #555;
+	background: #718cc6;
 	padding: 10px;
 	border-radius: 10px;
 	font-size: 18px;
@@ -337,9 +337,9 @@ wrapper .inner .box_R {
 }
 
 .set_text_size a.active {
-	background-color: #333;
+	background-color: #718cc6;
 	color: #fff;
-	border: #333;
+	border: #718cc6;
 }
 
 /* 字級大小 結束 */
@@ -353,13 +353,13 @@ wrapper .inner .box_R {
 	border-radius: 10px;
 	font-size: 16px;
 	color: #fff;
-	background-color: #333;
+	background-color: #718cc6;
 	margin: 10px 0 0 0;
 	padding: 6px 10px;
 }
 
 .btn_start:hover {
-	background-color: #444;
+	background-color: #8ea6db;
 }
 
 /* 開始答題按鈕 結束 */
