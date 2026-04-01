@@ -162,7 +162,7 @@ footer section:nth-child(2) p {
 .book_list a:hover,
 .book_list a.active {
 	color: #fff;
-	background: #555;
+	background: #718cc6;
 }
 
 @media(max-width:768px) {
@@ -339,7 +339,7 @@ wrapper .inner .box_R {
 .set_text_size a.active {
 	background-color: #718cc6;
 	color: #fff;
-	border: #718cc6;
+	border: 1px solid #718cc6;
 }
 
 /* 字級大小 結束 */
@@ -354,6 +354,7 @@ wrapper .inner .box_R {
 	font-size: 16px;
 	color: #fff;
 	background-color: #718cc6;
+	border: 1px solid #718cc6;
 	margin: 10px 0 0 0;
 	padding: 6px 10px;
 }
