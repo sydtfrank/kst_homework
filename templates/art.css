@@ -308,9 +308,7 @@ wrapper .inner .box_R {
 }
 
 @media(max-width:900px) {
-	.page_01 {
-		display: none;
-	}
+
 }
 
 /* 右邊大區塊 結束 */
